@@ -1,4 +1,4 @@
 hu/unideb/inf/view/FXMLChess.class
 hu/unideb/inf/MainApp.class
-hu/unideb/inf/Controls/Knight.class
+hu/unideb/inf/Model/Knight.class
 hu/unideb/inf/view/MainProjectController.class
