@@ -1,4 +1,12 @@
-/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/view/MainProjectController.java
-/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/MainApp.java
-/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/view/FXMLChess.java
-/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/Model/Knight.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/controller/FXMLChess.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/model/Player.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/jpa/package-info.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/jpa/GenericJpaDao.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/model/state/GameState.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/model/result/GameResult.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/customControls/Knight.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/FunctionsLibrary/FunctionsLib.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/model/result/GameResultExample.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/main/MainApp.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/model/result/GameResultDao.java
+/home/ssht/Music/ChessKnights/src/main/java/hu/unideb/inf/controller/FXMLMainScene.java
