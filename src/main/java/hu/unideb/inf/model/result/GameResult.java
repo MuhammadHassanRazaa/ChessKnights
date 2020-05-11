@@ -6,7 +6,6 @@
 package hu.unideb.inf.model.result;
 
 import java.io.Serializable;
-import java.time.Duration;
 import java.time.ZonedDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,34 +15,46 @@ import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
- *
+ * <p>Class representing the result of a game played by a specific player.<p>
+ * 
  * @author ssht
  */
 @Entity
-@Data
 @Builder
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class GameResult implements Serializable {
-
     @Id
-    private String playerName; 
+    @GeneratedValue(strategy =GenerationType.IDENTITY)
+    private int SNo;
+            
+    @Column(nullable=false)
+    private String player1; 
     
     @Column(nullable=false)
-    private boolean win; 
+    private String player2; 
     
     @Column(nullable=false)
-    private int winCount;
+    private String winner; 
     
     @Column(nullable=false)
     private ZonedDateTime created;
 
-  
-    
+     /**
+     *<p>Method for Setting Current Data Time while persisting Data<p>
+     * 
+     */
     @PrePersist
     protected void onPersist() {
         created = ZonedDateTime.now();
     }
-    
+   
+
 }

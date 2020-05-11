@@ -5,10 +5,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.Optional;
+import javax.persistence.Query;
 
 /**
- * Generic JPA DAO class that provides JPA support for the entity class
- * specified.
+ * <p>Generic JPA DAO class that provides JPA support for the entity class
+ * specified.</p>
  *
  * @param <T> the type of the entity class
  */
@@ -18,7 +19,7 @@ public abstract class GenericJpaDao<T> {
     protected EntityManager entityManager;
 
     /**
-     * Constructs a {@code GenericJpaDao} object.
+     * <p>Constructs a {@code GenericJpaDao} object.<p>
      *
      * @param entityClass the {@link Class} object that represents the entity
      *                    class
@@ -28,7 +29,7 @@ public abstract class GenericJpaDao<T> {
     }
 
     /**
-     * Returns the underlying {@link EntityManager} instance.
+     * <p>Returns the underlying {@link EntityManager} instance.<p>
      *
      * @return the underlying {@link EntityManager} instance
      */
@@ -37,7 +38,7 @@ public abstract class GenericJpaDao<T> {
     }
 
     /**
-     * Sets the underlying {@link EntityManager} instance.
+     * <p>Sets the underlying {@link EntityManager} instance.<p>
      *
      * @param entityManager the underlying {@link EntityManager} instance
      */
@@ -46,7 +47,7 @@ public abstract class GenericJpaDao<T> {
     }
 
     /**
-     * Persists the specified entity instance in the database.
+     * <p>Persists the specified entity instance in the database.<p>
      *
      * @param entity the entity instance to be persisted in the database
      */
@@ -57,9 +58,11 @@ public abstract class GenericJpaDao<T> {
     }
 
     /**
-     * Returns the entity instance with the specified primary key from the
-     * database. The method returns an empty {@link Optional} object when
-     * the instance does not exists.
+     * <p>Returns the entity instance with the specified primary key from the
+     * database.<p> 
+     * 
+     * <p>The method returns an empty {@link Optional} object when
+     * the instance does not exists.<p>
      *
      * @param primaryKey the primary key to look for
      * @return an {@link Optional} object wrapping the entity instance with
@@ -70,7 +73,7 @@ public abstract class GenericJpaDao<T> {
     }
 
     /**
-     * Returns the list of all instances of the entity class from the database.
+     * <p>Returns the list of all instances of the entity class from the database.<p>
      *
      * @return the list of all instances of the entity class from the database
      */
@@ -80,7 +83,7 @@ public abstract class GenericJpaDao<T> {
     }
 
     /**
-     * Removes the specified entity instance from the database.
+     * <p>Removes the specified entity instance from the database.<p>
      *
      * @param entity the entity instance to be removed from the database
      */
@@ -91,7 +94,7 @@ public abstract class GenericJpaDao<T> {
     }
 
     /**
-     * Updates the specified entity instance in the database.
+     * <p>Updates the specified entity instance in the database.<p>
      *
      * @param entity the entity instance to be updated in the database
      */
@@ -100,5 +103,7 @@ public abstract class GenericJpaDao<T> {
         entityManager.merge(entity);
         entityManager.getTransaction().commit();
     }
+    
+   
 
 }

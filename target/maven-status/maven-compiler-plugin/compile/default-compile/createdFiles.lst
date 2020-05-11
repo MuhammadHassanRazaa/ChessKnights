@@ -3,10 +3,15 @@ hu/unideb/inf/model/state/GameState.class
 hu/unideb/inf/model/Player.class
 hu/unideb/inf/model/result/GameResult$GameResultBuilder.class
 hu/unideb/inf/model/result/GameResult.class
-hu/unideb/inf/controller/FXMLMainScene.class
 hu/unideb/inf/customControls/Knight.class
-hu/unideb/inf/FunctionsLibrary/FunctionsLib.class
 hu/unideb/inf/jpa/GenericJpaDao.class
+hu/unideb/inf/model/Player$PlayerBuilder.class
+hu/unideb/inf/controller/FXMLResult$1.class
 hu/unideb/inf/model/result/GameResultDao.class
 hu/unideb/inf/controller/FXMLChess.class
 hu/unideb/inf/model/result/GameResultExample.class
+hu/unideb/inf/model/Data.class
+hu/unideb/inf/controller/FXMLMainScene.class
+hu/unideb/inf/FunctionsLibrary/FunctionsLib.class
+hu/unideb/inf/controller/FXMLResult.class
+hu/unideb/inf/model/PlayerDao.class
