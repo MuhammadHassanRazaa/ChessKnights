@@ -18,12 +18,13 @@ public class MainApp extends Application {
     private Stage mainStage;
 
     /**
-     *<p>This Method will launch the Main Scene of the Game
-     * and will set the attributes.</p>
-     * 
-     * 
+     * <p>
+     * This Method will launch the Main Scene of the Game and will set the
+     * attributes.</p>
+     *
+     *
      * @param stage the main stage
-     * @throws Exception
+     * @throws Exception throws Exception if there's any Loading Error
      */
     @Override
     public void start(Stage stage) throws Exception {

@@ -26,7 +26,7 @@ import java.util.List;
 
 /**
  * <p>
- * Controller Class for result.fxml
+ * Controller Class for result.fxml.
  * <p>
  *
  * @author ssht
@@ -50,8 +50,7 @@ public class FXMLResult {
 
     /**
      * <p>
-     * It will call the main Scene Again and close this one
-     * <p>
+     * It will call the main Scene Again and close this one.</p>
      *
      * @param actionEvent
      * @throws IOException
@@ -76,7 +75,8 @@ public class FXMLResult {
 
     /**
      * <p>
-     * It will load Data in TableView from Database<p>
+     * It will load Data in TableView from Database.</p>
+     *
      */
     @FXML
     public void initialize() {

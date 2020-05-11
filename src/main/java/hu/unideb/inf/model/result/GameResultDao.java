@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * <p>DAO class for the {@link GameResult} entity<p>
+ * <p>
+ * DAO class for the {@link GameResult} entity.</p>
  */
 public class GameResultDao extends GenericJpaDao<GameResult> {
 
@@ -18,7 +19,9 @@ public class GameResultDao extends GenericJpaDao<GameResult> {
     }
 
     /**
-     *<p>Getting Instance of {@link GameResultDao}
+     * <p>
+     * Getting Instance of {@link GameResultDao}.</p>
+     *
      * @return Instance of {@link GameResultDao}
      */
     public static GameResultDao getInstance() {
@@ -28,9 +31,5 @@ public class GameResultDao extends GenericJpaDao<GameResult> {
         }
         return instance;
     }
-
-
-  
- 
 
 }

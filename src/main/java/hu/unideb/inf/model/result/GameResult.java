@@ -20,8 +20,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * <p>Class representing the result of a game played by a specific player.<p>
- * 
+ * <p>
+ * Class representing the result of a game played by a specific player.</p>
+ *
  * @author ssht
  */
 @Entity
@@ -31,30 +32,31 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GameResult implements Serializable {
+
     @Id
-    @GeneratedValue(strategy =GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int SNo;
-            
-    @Column(nullable=false)
-    private String player1; 
-    
-    @Column(nullable=false)
-    private String player2; 
-    
-    @Column(nullable=false)
-    private String winner; 
-    
-    @Column(nullable=false)
+
+    @Column(nullable = false)
+    private String player1;
+
+    @Column(nullable = false)
+    private String player2;
+
+    @Column(nullable = false)
+    private String winner;
+
+    @Column(nullable = false)
     private ZonedDateTime created;
 
-     /**
-     *<p>Method for Setting Current Data Time while persisting Data<p>
-     * 
+    /**
+     * <p>
+     * Method for Setting Current Data Time while persisting Data.</p>
+     *
      */
     @PrePersist
     protected void onPersist() {
         created = ZonedDateTime.now();
     }
-   
 
 }

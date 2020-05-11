@@ -9,7 +9,8 @@ import java.util.Optional;
 import javax.persistence.Query;
 
 /**
- * DAO class for the {@link GameResult} entity.
+ * <p>
+ * DAO class for the {@link GameResult} entity.</p>
  */
 public class PlayerDao extends GenericJpaDao<Player> {
 
@@ -18,7 +19,14 @@ public class PlayerDao extends GenericJpaDao<Player> {
     private PlayerDao() {
         super(Player.class);
     }
-
+/**
+ * <p>
+ * Returns the instance of  {@link PlayerDao}.</p>
+ * 
+ * <p>It will check if instance is null then create new instance
+ * with the help of persistence file.</p>
+ * @return the instance of {@link PlayerDao}
+ */
     public static PlayerDao getInstance() {
         if (instance == null) {
             instance = new PlayerDao();
@@ -28,28 +36,31 @@ public class PlayerDao extends GenericJpaDao<Player> {
     }
 
     /**
-     * <p>Returns the list of {@code n} best results with respect to the number
-     * of wins.</p>
+     * <p>
+     * Returns the list of {@code n} best results with respect to the number of
+     * wins.</p>
      *
      * @param n the maximum number of results to be returned
-     * @return the list of {@code n} best results with respect to the number of wins
-     * 
+     * @return the list of {@code n} best results with respect to the number of
+     * wins
+     *
      */
     public List<Player> findBest(int n) {
         return entityManager.createQuery("SELECT r FROM Player r WHERE r.winCount > 0 ORDER BY r.winCount DESC ", Player.class)
                 .setMaxResults(n)
                 .getResultList();
     }
-    
+
     /**
-     * <p>Update the {@link Player} object's {@link winCount}<p>
+     * <p>
+     * Update the {@link Player} object's winCount.</p>
      *
      * @param name the name of player to be updated
      * @param winc the new win count of player
-     * 
-     * 
+     *
+     *
      */
-    public void update(String name,int winc) {
+    public void update(String name, int winc) {
         entityManager.getTransaction().begin();
         Query setParameter = entityManager.createQuery("UPDATE Player set winCount =:c where name = :name")
                 .setParameter("c", winc)

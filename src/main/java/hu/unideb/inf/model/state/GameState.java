@@ -18,7 +18,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- *<p>Class for Representing the Game State <p>
+ * <p>
+ * Class for Representing the Game State.</p>
+ *
  * @author ssht
  */
 @Setter
@@ -33,9 +35,11 @@ public class GameState {
     private int turnPlayer = 0;
 
     private boolean isWhiteMove;
-    
+
     /**
-     *<p>Constructs the instance of GameState<p>
+     * <p>
+     * Constructs the instance of GameState.</p>
+     *
      * @param player first player
      * @param player0 second player
      */
@@ -59,7 +63,8 @@ public class GameState {
     }
 
     /**
-     * <p>Changing the Player's Turn<p>
+     * <p>
+     * Changing the Player's Turn.</p>
      */
     public void advanceTurnPlayer() {
 
@@ -70,15 +75,15 @@ public class GameState {
         }
     }
 
-    
-
     /**
-     *<p>Total Number of Rows in Chess Board<p>
+     * <p>
+     * Total Number of Rows in Chess Board.</p>
      */
     public static final int TOTAL_ROWS = 8;
 
     /**
-     *<p>Total Number of Cols in Chess Board<p>
+     * <p>
+     * Total Number of Cols in Chess Board.</p>
      */
     public static final int TOTAL_COLS = 8;
 
@@ -87,12 +92,13 @@ public class GameState {
     private static Set<Point> restrictedSquares = new HashSet<>();
 
     /**
-     *<p>Getting the other object of {@link Player} by index<p>
-     * 
+     * <p>
+     * Getting the other object of {@link Player} by index.</p>
+     *
      * It will return the other player object
-     * 
+     *
      * @param i index of player
-     * @return the other object of {@link Player} 
+     * @return the other object of {@link Player}
      */
     public Player getOther(int i) {
         if (i == 1) {
@@ -103,18 +109,20 @@ public class GameState {
     }
 
     /**
-     *<p>Getting the {@link Player} object by index<p>
-     * 
+     * <p>
+     * Getting the {@link Player} object by index.</p>
+     *
      * @param i index of object
-     * @return the object of {@link Player} 
+     * @return the object of {@link Player}
      */
     public Player getPlayer(int i) {
         return this.players.get(i);
     }
 
     /**
-     *<p>Getting the  WhitePlayer<p>
-     * 
+     * <p>
+     * Getting the WhitePlayer.</p>
+     *
      * @return white player
      */
     public Player getWhitePlayer() {
@@ -122,8 +130,9 @@ public class GameState {
     }
 
     /**
-     *<p>Getting the  Black<p>
-     * 
+     * <p>
+     * Getting the Black.</p>
+     *
      * @return black player
      */
     public Player getBlackPlayer() {
@@ -131,15 +140,16 @@ public class GameState {
     }
 
     /**
-     *<p>Adding Point to Restricted Set<p>
-     * 
-     * <p>it will add point to the Set of points, the player not
-     * allowed to go </p>
-     * @param p
+     * <p>
+     * Adding Point to Restricted Set.</p>
+     *
+     * <p>
+     * it will add point to the Set of points, the player not allowed to go </p>
+     *
+     * @param p point which needs to be restricted
      */
     public static void AddRestricted(Point p) {
         restrictedSquares.add(p);
     }
-
 
 }

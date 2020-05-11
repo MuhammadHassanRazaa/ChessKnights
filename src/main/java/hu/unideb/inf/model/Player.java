@@ -26,9 +26,11 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- *<p>Class representing Player <p>
- * 
- * 
+ * <p>
+ * Class representing Player.
+ * <p>
+ *
+ *
  * @author ssht
  */
 @Setter
@@ -39,61 +41,67 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Player implements Serializable {
+
     @Id
     private String name;
-    
+
     @Column(nullable = false)
     private int winCount;
-    
+
     @Transient
-     private int row;
+    private int row;
     @Transient
-    private int col;    
+    private int col;
     @Transient
     private boolean isWhite;
     @Transient
     private int playerId;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private ZonedDateTime created;
 
     /**
-     *<p>Method for Setting Current Data Time while persisting Data<p>
-     * 
+     * <p>
+     * Method for Setting Current Data Time while persisting Data.</p>
+     *
      */
     @PrePersist
     protected void onPersist() {
         created = ZonedDateTime.now();
     }
-    
+
     /**
-     *<h2>Constructor of Player <h2>
-     * 
-     * <p>It will make new instance of {@link Player} object <p>
-     * 
-     * @param user1
-     * @param isWhite
-     * @param id
+     * <p>
+     * Constructor of Player.</p>
+     *
+     * <p>
+     * It will make new instance of {@link Player} object.</p>
+     *
+     * @param user1 player name
+     * @param isWhite if is player white
+     * @param id playerId according to gameState
      */
-    public Player(String user1,boolean isWhite,int id) {
+    public Player(String user1, boolean isWhite, int id) {
         this.name = user1;
         this.isWhite = isWhite;
         this.playerId = id;
-        this.winCount=0;
+        this.winCount = 0;
     }
-    
+
     /**
-     *<p>Method for getting Location of player<p>
-     * 
+     * <p>
+     * Method for getting Location of player.</p>
+     *
      * @return the current Position of Player on Chess baord
      */
     public Point getCurrentLocation() {
         return new Point(row, col);
     }
-    
+
     /**
-     *<p>Method for getting Available Moves of player<p>
-     * 
+     * <p>
+     * Method for getting Available Moves of player.</p>
+     *
      * @return possible moves of player
      */
     public Set<Point> getMoves() {

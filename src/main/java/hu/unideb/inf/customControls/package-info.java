@@ -1,4 +1,4 @@
 /**
  * Provides helper classes to work with JPA.
  */
-package hu.unideb.inf.jpa;
+package hu.unideb.inf.customControls;

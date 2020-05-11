@@ -5,7 +5,7 @@
  */
 package hu.unideb.inf.customControls;
 
-
+import hu.unideb.inf.model.state.GameState;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 import lombok.AccessLevel;
@@ -21,14 +21,19 @@ import lombok.Setter;
 public class Knight extends Label {
 
     private boolean isWhite;
-    
 
     private int knightId;
 
-
-    public Knight(boolean isWhite,int id) {
+    /**
+     * <p>
+     * Create new Label with given text.</p>
+     *
+     * @param isWhite is Knight white
+     * @param id the id of knight according to {@link GameState} object
+     */
+    public Knight(boolean isWhite, int id) {
         super("\u2658");
-        this.knightId=id;
+        this.knightId = id;
         this.isWhite = isWhite;
         super.setFont(new Font(80));
         if (!isWhite) {
@@ -36,5 +41,4 @@ public class Knight extends Label {
         }
     }
 
-   
 }
