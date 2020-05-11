@@ -1,5 +1,6 @@
 /**
  * <p>
- * Provides helper classes to work with JPA.</p>
+ * Provides classes for Game Result.</p>
+ * 
  */
 package hu.unideb.inf.model.result;

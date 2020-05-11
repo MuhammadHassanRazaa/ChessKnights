@@ -30,8 +30,8 @@ import lombok.ToString;
  * Class representing Player.
  * <p>
  *
- *
  * @author ssht
+ * @version $Id: $Id
  */
 @Setter
 @Getter
@@ -63,7 +63,6 @@ public class Player implements Serializable {
     /**
      * <p>
      * Method for Setting Current Data Time while persisting Data.</p>
-     *
      */
     @PrePersist
     protected void onPersist() {
@@ -75,7 +74,7 @@ public class Player implements Serializable {
      * Constructor of Player.</p>
      *
      * <p>
-     * It will make new instance of {@link Player} object.</p>
+     * It will make new instance of {@link hu.unideb.inf.model.Player} object.</p>
      *
      * @param user1 player name
      * @param isWhite if is player white

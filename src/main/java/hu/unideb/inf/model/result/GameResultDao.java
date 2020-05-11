@@ -8,7 +8,10 @@ import java.util.Optional;
 
 /**
  * <p>
- * DAO class for the {@link GameResult} entity.</p>
+ * DAO class for the {@link hu.unideb.inf.model.result.GameResult} entity.</p>
+ *
+ * @author ssht
+ * @version $Id: $Id
  */
 public class GameResultDao extends GenericJpaDao<GameResult> {
 
@@ -20,9 +23,9 @@ public class GameResultDao extends GenericJpaDao<GameResult> {
 
     /**
      * <p>
-     * Getting Instance of {@link GameResultDao}.</p>
+     * Getting Instance of {@link hu.unideb.inf.model.result.GameResultDao}.</p>
      *
-     * @return Instance of {@link GameResultDao}
+     * @return Instance of {@link hu.unideb.inf.model.result.GameResultDao}
      */
     public static GameResultDao getInstance() {
         if (instance == null) {

@@ -13,6 +13,7 @@ import lombok.Setter;
  * Class made to store some data temporarily.<p>
  *
  * @author ssht
+ * @version $Id: $Id
  */
 public class Data {
 

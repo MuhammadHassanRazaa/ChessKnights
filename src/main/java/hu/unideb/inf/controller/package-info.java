@@ -1,4 +1,4 @@
 /**
- * Provides helper classes to work with JPA.
+ * Provides Classes to Control the GUI.
  */
 package hu.unideb.inf.controller;

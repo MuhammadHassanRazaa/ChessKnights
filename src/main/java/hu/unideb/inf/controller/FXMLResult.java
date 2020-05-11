@@ -30,6 +30,7 @@ import java.util.List;
  * <p>
  *
  * @author ssht
+ * @version $Id: $Id
  */
 @Slf4j
 public class FXMLResult {
@@ -55,7 +56,7 @@ public class FXMLResult {
      * @param actionEvent
      * @throws IOException
      */
-    @FXML
+@FXML
     private void back(ActionEvent actionEvent) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/MainScene.fxml"));
@@ -76,7 +77,6 @@ public class FXMLResult {
     /**
      * <p>
      * It will load Data in TableView from Database.</p>
-     *
      */
     @FXML
     public void initialize() {

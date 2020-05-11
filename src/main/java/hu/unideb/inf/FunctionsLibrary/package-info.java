@@ -1,4 +1,4 @@
 /**
- * Provides helper classes to work with JPA.
+ * Provides helper methods to be used in Project.
  */
 package hu.unideb.inf.FunctionsLibrary;

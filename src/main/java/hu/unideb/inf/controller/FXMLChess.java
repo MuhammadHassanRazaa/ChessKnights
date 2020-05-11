@@ -30,9 +30,9 @@ import lombok.extern.slf4j.Slf4j;
  * Controller Class for Chess.fxml.
  *
  * @author ssht
+ * @version $Id: $Id
  */
 @Slf4j
-
 public class FXMLChess {
 
     @FXML // ResourceBundle that was given to the FXMLLoader

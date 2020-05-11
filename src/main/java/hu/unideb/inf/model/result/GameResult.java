@@ -24,6 +24,7 @@ import lombok.Setter;
  * Class representing the result of a game played by a specific player.</p>
  *
  * @author ssht
+ * @version $Id: $Id
  */
 @Entity
 @Builder
@@ -52,7 +53,6 @@ public class GameResult implements Serializable {
     /**
      * <p>
      * Method for Setting Current Data Time while persisting Data.</p>
-     *
      */
     @PrePersist
     protected void onPersist() {

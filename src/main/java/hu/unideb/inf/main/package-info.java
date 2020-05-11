@@ -1,4 +1,4 @@
 /**
- * Provides helper classes to work with JPA.
+ * Contains Main class of Project.
  */
 package hu.unideb.inf.main;

@@ -9,8 +9,10 @@ import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * <p>The Class responsible for starting GUI operations.</p>
  *
  * @author ssht
+ * @version $Id: $Id
  */
 @Slf4j
 public class MainApp extends Application {
@@ -18,13 +20,11 @@ public class MainApp extends Application {
     private Stage mainStage;
 
     /**
+     * {@inheritDoc}
+     *
      * <p>
      * This Method will launch the Main Scene of the Game and will set the
      * attributes.</p>
-     *
-     *
-     * @param stage the main stage
-     * @throws Exception throws Exception if there's any Loading Error
      */
     @Override
     public void start(Stage stage) throws Exception {
@@ -39,17 +39,6 @@ public class MainApp extends Application {
         log.info("Showing the Main Scene of Game");
     }
 
-    /**
-     * The main() method is ignored in correctly deployed JavaFX application.
-     * main() serves only as fallback in case the application can not be
-     * launched through deployment artifacts, e.g., in IDEs with limited FX
-     * support. NetBeans ignores main().
-     *
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-
-        launch(args);
-    }
+    
 
 }

@@ -12,6 +12,8 @@ import javax.persistence.Query;
  * specified.</p>
  *
  * @param <T> the type of the entity class
+ * @author ssht
+ * @version $Id: $Id
  */
 public abstract class GenericJpaDao<T> {
 
@@ -22,7 +24,7 @@ public abstract class GenericJpaDao<T> {
      * <p>
      * Constructs a {@code GenericJpaDao} object.</p>
      *
-     * @param entityClass the {@link Class} object that represents the entity
+     * @param entityClass the {@link java.lang.Class} object that represents the entity
      * class
      */
     public GenericJpaDao(Class<T> entityClass) {
@@ -31,9 +33,9 @@ public abstract class GenericJpaDao<T> {
 
     /**
      * <p>
-     * Returns the underlying {@link EntityManager} instance.</p>
+     * Returns the underlying {@link javax.persistence.EntityManager} instance.</p>
      *
-     * @return the underlying {@link EntityManager} instance
+     * @return the underlying {@link javax.persistence.EntityManager} instance
      */
     public EntityManager getEntityManager() {
         return entityManager;
@@ -41,9 +43,9 @@ public abstract class GenericJpaDao<T> {
 
     /**
      * <p>
-     * Sets the underlying {@link EntityManager} instance.</p>
+     * Sets the underlying {@link javax.persistence.EntityManager} instance.</p>
      *
-     * @param entityManager the underlying {@link EntityManager} instance
+     * @param entityManager the underlying {@link javax.persistence.EntityManager} instance
      */
     public void setEntityManager(EntityManager entityManager) {
         this.entityManager = entityManager;
@@ -67,11 +69,11 @@ public abstract class GenericJpaDao<T> {
      * database.</p>
      *
      * <p>
-     * The method returns an empty {@link Optional} object when the instance
+     * The method returns an empty {@link java.util.Optional} object when the instance
      * does not exists.</p>
      *
      * @param primaryKey the primary key to look for
-     * @return an {@link Optional} object wrapping the entity instance with the
+     * @return an {@link java.util.Optional} object wrapping the entity instance with the
      * specified primary key
      */
     public Optional<T> find(Object primaryKey) {

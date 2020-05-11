@@ -14,3 +14,4 @@ hu/unideb/inf/controller/FXMLMainScene.class
 hu/unideb/inf/FunctionsLibrary/FunctionsLib.class
 hu/unideb/inf/controller/FXMLResult.class
 hu/unideb/inf/model/PlayerDao.class
+hu/unideb/inf/main/Main.class

@@ -1,4 +1,4 @@
 /**
- * Provides helper classes to work with JPA.
+ * Provides classes for Game State.
  */
 package hu.unideb.inf.model.state;

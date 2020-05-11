@@ -19,6 +19,7 @@ import java.io.IOException;
  * Controller of MainScene.fxml.
  *
  * @author ssht
+ * @version $Id: $Id
  */
 @Slf4j
 public class FXMLMainScene {

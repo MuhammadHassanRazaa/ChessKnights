@@ -13,8 +13,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
+ * <p>Knight class.</p>
  *
  * @author Muhammad Hassan Raza
+ * @version $Id: $Id
  */
 @Getter
 @Setter
@@ -29,7 +31,7 @@ public class Knight extends Label {
      * Create new Label with given text.</p>
      *
      * @param isWhite is Knight white
-     * @param id the id of knight according to {@link GameState} object
+     * @param id the id of knight according to {@link hu.unideb.inf.model.state.GameState} object
      */
     public Knight(boolean isWhite, int id) {
         super("\u2658");

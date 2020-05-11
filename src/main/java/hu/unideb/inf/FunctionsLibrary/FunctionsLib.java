@@ -13,19 +13,22 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.WindowEvent;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * <p>
- * Class providing Some useful functions and events.<p>
+ * Class providing Some useful functions and events.</p>
  *
  * @author ssht
+ * @version $Id: $Id
  */
+@Slf4j
 public class FunctionsLib {
 
     /**
      * <p>
      * Event to override default Close Event(javafx).
-     * <p>
+     * </p>
      *
      */
     public static EventHandler<WindowEvent> confirmCloseEventHandler = event -> {
@@ -37,6 +40,7 @@ public class FunctionsLib {
         if (!ButtonType.YES.equals(alert.showAndWait().get())) {
             event.consume();
         }
+        
     };
 
 }

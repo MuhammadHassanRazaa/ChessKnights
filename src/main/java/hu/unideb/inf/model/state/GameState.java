@@ -22,6 +22,7 @@ import lombok.Setter;
  * Class for Representing the Game State.</p>
  *
  * @author ssht
+ * @version $Id: $Id
  */
 @Setter
 @Getter
@@ -41,6 +42,7 @@ public class GameState {
      * Constructs the instance of GameState.</p>
      *
      * @param player first player
+     * @param player0 second player
      * @param player0 second player
      */
     public GameState(Player player, Player player0) {
@@ -79,12 +81,14 @@ public class GameState {
      * <p>
      * Total Number of Rows in Chess Board.</p>
      */
+    @Getter
     public static final int TOTAL_ROWS = 8;
 
     /**
      * <p>
      * Total Number of Cols in Chess Board.</p>
      */
+    @Getter
     public static final int TOTAL_COLS = 8;
 
     @Setter(AccessLevel.NONE)
@@ -93,12 +97,12 @@ public class GameState {
 
     /**
      * <p>
-     * Getting the other object of {@link Player} by index.</p>
+     * Getting the other object of {@link hu.unideb.inf.model.Player} by index.</p>
      *
      * It will return the other player object
      *
      * @param i index of player
-     * @return the other object of {@link Player}
+     * @return the other object of {@link hu.unideb.inf.model.Player}
      */
     public Player getOther(int i) {
         if (i == 1) {
@@ -110,10 +114,10 @@ public class GameState {
 
     /**
      * <p>
-     * Getting the {@link Player} object by index.</p>
+     * Getting the {@link hu.unideb.inf.model.Player} object by index.</p>
      *
      * @param i index of object
-     * @return the object of {@link Player}
+     * @return the object of {@link hu.unideb.inf.model.Player}
      */
     public Player getPlayer(int i) {
         return this.players.get(i);

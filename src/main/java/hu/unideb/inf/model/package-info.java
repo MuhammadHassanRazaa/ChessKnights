@@ -1,5 +1,5 @@
 /**
  * <p>
- * Provides helper classes to work with JPA.</p>
+ * Provides classes for models.</p>
  */
 package hu.unideb.inf.model;
