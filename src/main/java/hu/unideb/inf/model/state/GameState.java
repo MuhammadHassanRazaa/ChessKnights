@@ -53,6 +53,7 @@ public class GameState {
         this.turnPlayer = 0;
         isWhiteMove = true;
 
+        restrictedSquares = new HashSet<>();
         players.forEach((player1) -> {
             if (player1.isWhite()) {
                 player1.setCol(7);

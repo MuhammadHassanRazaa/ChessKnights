@@ -12,8 +12,10 @@ import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import hu.unideb.inf.FunctionsLibrary.FunctionsLib;
 import hu.unideb.inf.model.Data;
+import hu.unideb.inf.model.state.GameState;
 
 import java.io.IOException;
+import java.util.HashSet;
 
 /**
  * Controller of MainScene.fxml.
@@ -47,7 +49,12 @@ public class FXMLMainScene {
         if (player1nameText.getText().trim().isEmpty() || player2nameText.getText().trim().isEmpty()) {
             errorLabel.setText("* Player Names are required!!");
             log.error("Player Names are not Provided");
-        } else {
+        }
+        else if(player1nameText.getText().trim().equals(player2nameText.getText().trim())){
+            errorLabel.setText("* Player Names can't be same!!");
+            log.error("Player Names are same");
+        }
+         else {
             try {
                 FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/chess.fxml"));
                 Data.setP1(player1nameText.getText().trim());

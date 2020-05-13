@@ -49,9 +49,11 @@ public class PlayerDao extends GenericJpaDao<Player> {
      * wins
      */
     public List<Player> findBest(int n) {
-        return entityManager.createQuery("SELECT r FROM Player r WHERE r.winCount > 0 ORDER BY r.winCount DESC ", Player.class)
+        List<Player> i= entityManager.createQuery("SELECT r FROM Player r WHERE r.winCount > 0 ORDER BY r.winCount DESC", Player.class)
                 .setMaxResults(n)
                 .getResultList();
+       return i;
+       
     }
 
     /**

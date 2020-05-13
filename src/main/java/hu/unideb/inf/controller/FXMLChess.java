@@ -208,7 +208,6 @@ public class FXMLChess {
         if (moves.length == 0) {
             Player playerWon = gameState.getOther(clickedKnight.getKnightId());
             Player playerLoose = gameState.getPlayer(clickedKnight.getKnightId());
-            playerWon.setWinCount(1);
             Alert a = new Alert(Alert.AlertType.INFORMATION, playerWon.getName() + " Won", ButtonType.OK);
             a.showAndWait();
             log.info("Game Finished,Winner is: {}", playerWon.getName());
